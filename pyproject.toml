@@ -1,0 +1,19 @@
+[project]
+name = "epaper-converter"
+version = "0.1.0"
+description = "Convert images to 7-color e-paper display BMP format"
+readme = "Previous-README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=12.1.1",
+]
+
+[project.scripts]
+epaper-convert = "epaper.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/epaper"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
